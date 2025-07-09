@@ -1,4 +1,4 @@
-abcde = input("Please enter the five digit number: ")
+abcde = input("Please enter the five digit number:")
 a = int(abcde) // 10000
 b = (int(abcde) % 10000) // 1000
 c = (int(abcde) % 1000) // 100
