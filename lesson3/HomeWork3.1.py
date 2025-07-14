@@ -6,10 +6,10 @@ if action == "plus" or action == "+":
 elif action == "minus" or action == "-":
     print (number1 - number2)
 elif action == "divide" or action == "/":
-    if number2 != 0:
+    if bool(number2):
         print(number1 / number2)
     else:
-        print ("Impossible operation")
+        print("Impossible operation")
 elif action == "multiply" or action == "*":
     print (number1 * number2)
 else: print("Unknown operation")
