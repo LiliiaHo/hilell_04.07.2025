@@ -20,7 +20,7 @@ if len(lst) <= 1:
 elif len(lst) > 1:
     moved_element = lst.pop(-1)
     lst.insert(0, moved_element)
-    print(len(lst))
+    print(lst)
 
 lst = [12, 3, 4, 10, 8]
 if len(lst) <= 1:
@@ -31,14 +31,6 @@ elif len(lst) > 1:
     print(lst)
 
 lst = [0]
-if len(lst) <= 1:
-    print(lst)
-elif len(lst) > 1:
-    moved_element = lst.pop(-1)
-    lst.insert(0, moved_element)
-    print(lst)
-
-lst = [4]
 if len(lst) <= 1:
     print(lst)
 elif len(lst) > 1:
