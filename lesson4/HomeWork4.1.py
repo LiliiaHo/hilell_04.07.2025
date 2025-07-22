@@ -2,7 +2,7 @@
 # lst = [0]
 # lst = [1, 0, 13, 0, 0, 0, 5]
 lst = [9, 0, 7, 31, 0, 45, 0, 45, 0, 45, 0, 0, 96, 0]
-zeros= []
+zeros = []
 for i in lst:
     if i == 0:
         zeros.append(i)
