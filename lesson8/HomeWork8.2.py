@@ -1,3 +1,5 @@
+import string
+
 def is_palindrome(text: str) -> bool:
 
     only_text = [ch.lower() for ch in text if ch.isalnum()]
