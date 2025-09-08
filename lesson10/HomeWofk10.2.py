@@ -1,11 +1,15 @@
 def first_word(text: str) -> str:
+
     """ Пошук першого слова """
+
     cleaned = ""
+
     for ch in text:
         if ch.isalpha() or ch == "'" or ch.isspace():
             cleaned += ch
         else:
             cleaned += " "
+
     return cleaned.split()[0]
 
 
