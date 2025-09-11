@@ -1,4 +1,8 @@
-def generate_cube_numbers(end):
+from typing import Generator
+from inspect import isgenerator
+
+
+def generate_cube_numbers(end: int) -> Generator[int, None, None]:
     """
     Генератор, що послідовно повертає куби цілих чисел,
     починаючи з 2 ** 3, доки результат не перевищить end.
@@ -11,8 +15,6 @@ def generate_cube_numbers(end):
     while n ** 3 <= end:
         yield n ** 3
         n += 1
-
-from inspect import isgenerator
 
 gen = generate_cube_numbers(1)
 
