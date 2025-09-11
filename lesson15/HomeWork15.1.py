@@ -7,7 +7,7 @@ class Rectangle:
     Дозволяє працювати з площею, порівнювати, додавати та множити прямокутники.
     """
 
-    def __init__(self, width, height):
+    def __init__(self, width: float, height: float) -> None:
         """
         Створює новий прямокутник.
 
@@ -18,7 +18,7 @@ class Rectangle:
         self.height = height
 
     @property
-    def area(self):
+    def area(self) -> float:
         """
         Обчислює площу прямокутника.
 
@@ -26,7 +26,7 @@ class Rectangle:
         """
         return self.width * self.height
 
-    def __str__(self):
+    def __str__(self) -> str:
         """
         Представлення прямокутника у вигляді стрічки.
 
@@ -34,7 +34,7 @@ class Rectangle:
         """
         return f"Rectangle({self.width}, {self.height}) площа = {self.area}"
 
-    def __eq__(self, other):
+    def __eq__(self, other: "Rectangle") -> bool:
         """
         Перевіряє на рівність площі прямокутників.
 
@@ -43,7 +43,7 @@ class Rectangle:
         """
         return self.area == other.area
 
-    def __lt__(self, other):
+    def __lt__(self, other: "Rectangle") -> bool:
         """
         Перевіряє, чи менша площа даного прямокутника за площу іншого.
 
@@ -52,7 +52,7 @@ class Rectangle:
         """
         return self.area < other.area
 
-    def __gt__(self, other):
+    def __gt__(self, other: "Rectangle") -> bool:
         """
         Перевіряє, чи більша площа даного прямокутника за площу іншого.
 
@@ -61,7 +61,7 @@ class Rectangle:
         """
         return self.area > other.area
 
-    def __add__(self, other):
+    def __add__(self, other: "Rectangle") -> "Rectangle":
         """
         Додає два прямокутники.
 
@@ -76,7 +76,7 @@ class Rectangle:
         side = math.isqrt(new_area)
         return Rectangle(side, new_area / side)
 
-    def __mul__(self, n):
+    def __mul__(self, n: float) -> "Rectangle":
         """
         Множить площу прямокутника на число.
 
