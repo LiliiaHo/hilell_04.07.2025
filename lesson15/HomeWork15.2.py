@@ -7,7 +7,7 @@ class Fraction:
         b (int): знаменник
     """
 
-    def __init__(self, a, b):
+    def __init__(self, a: int, b: int) -> None:
         """
         Ініціалізація дробу.
 
@@ -18,7 +18,7 @@ class Fraction:
         self.a = a
         self.b = b
 
-    def __mul__(self, other):
+    def __mul__(self, other: "Fraction") -> "Fraction":
         """
         Множення двох дробів.
 
@@ -29,7 +29,7 @@ class Fraction:
         """
         return Fraction(self.a * other.a, self.b * other.b)
 
-    def __add__(self, other):
+    def __add__(self, other: "Fraction") -> "Fraction":
         """
         Додавання двох дробів.
 
@@ -40,7 +40,7 @@ class Fraction:
         """
         return Fraction(self.a * other.b + self.b * other.a, self.b * other.b)
 
-    def __sub__(self, other):
+    def __sub__(self, other: "Fraction") -> "Fraction":
         """
         Віднімання двох дробів.
 
@@ -51,7 +51,7 @@ class Fraction:
         """
         return Fraction(self.a * other.b - self.b * other.a, self.b * other.b)
 
-    def __eq__(self, other):
+    def __eq__(self, other: "Fraction") -> bool:
         """
         Перевірка рівності дробів.
 
@@ -62,7 +62,7 @@ class Fraction:
         """
         return self.a * other.b == self.b * other.a
 
-    def __gt__(self, other):
+    def __gt__(self, other: "Fraction") -> bool:
         """
         Перевірка чи більший дріб
 
@@ -73,7 +73,7 @@ class Fraction:
         """
         return self.a * other.b > self.b * other.a
 
-    def __lt__(self, other):
+    def __lt__(self, other: "Fraction") -> bool:
         """
         Перевірка чи меньший дріб
 
@@ -84,7 +84,7 @@ class Fraction:
         """
         return self.a * other.b < self.b * other.a
 
-    def __str__(self):
+    def __str__(self) -> str:
         """
         Перетворення дробу у формат стрічки
 
