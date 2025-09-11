@@ -4,13 +4,18 @@ class Human:
     інформацію: ім'я, прізвище, вік, стать.
     """
 
-    def __init__(self, gender, age, first_name, last_name):
+    gender: str
+    age: int
+    first_name: str
+    last_name: str
+
+    def __init__(self, gender: str, age: int, first_name: str, last_name: str) -> None:
         self.gender = gender
         self.age = age
         self.first_name = first_name
         self.last_name = last_name
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"{self.first_name} {self.last_name}, {self.age} y.o., {self.gender}"
 
 class Student(Human):
@@ -19,11 +24,13 @@ class Student(Human):
     та додає інформацію про залікову книжку
     """
 
-    def __init__(self, gender, age, first_name, last_name, record_book):
+    record_book: str
+
+    def __init__(self, gender: str, age: int, first_name: str, last_name: str, record_book: str) -> None:
         super().__init__(gender, age, first_name, last_name)
         self.record_book = record_book
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"{super().__str__()} [Record book: {self.record_book}]"
 
 class Group:
@@ -33,25 +40,28 @@ class Group:
     видалення та відображення списку студентів
     """
 
-    def __init__(self, number):
+    number: str
+    group: set[Student]
+
+    def __init__(self, number: str) -> None:
         self.number = number
         self.group = set()
 
-    def add_student(self, student):
+    def add_student(self, student: Student) -> None:
         self.group.add(student)
 
-    def delete_student(self, last_name):
+    def delete_student(self, last_name: str) -> None:
         student = self.find_student(last_name)
         if student:
             self.group.remove(student)
 
-    def find_student(self, last_name):
+    def find_student(self, last_name: str) -> Student | None:
         for student in self.group:
             if student.last_name == last_name:
                 return student
         return None
 
-    def __str__(self):
+    def __str__(self) -> str:
         all_students = "\n".join(str(student) for student in self.group)
         return f"Number: {self.number}\\n {all_students}"
 
