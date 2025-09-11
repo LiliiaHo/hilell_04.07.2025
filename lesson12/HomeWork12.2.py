@@ -24,7 +24,7 @@ class User:
 
 
 class Purchase:
-    """Buyers oder"""
+    """Buyers oder."""
 
     def __init__(self, user: User) -> None:
         self.products: dict[Item: int] = {}
