@@ -24,10 +24,10 @@ class User:
 
 
 class Purchase:
-    """The order contains a buyer and a list of goods(goods + quantity)"""
+    """Buyers oder"""
 
     def __init__(self, user: User) -> None:
-        self.products: dict[Item, int] = {}
+        self.products: dict[Item: int] = {}
         self.user = user
         self.total = 0
 
